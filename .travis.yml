@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true kckam/react-test npm test -- --watchAll=false
 
 after_success:
-  - docker build -t kckam/multi-client:0.0.1 ./client
+  - docker build -t kckam/multi-client ./client
   - docker build -t kckam/multi-nginx ./nginx
   - docker build -t kckam/multi-server ./server
   - docker build -t kckam/multi-worker ./worker
