@@ -20,7 +20,7 @@ after_success:
   - docker push kckam/multi-worker
 
 deploy:
-  provider: elastickbeanstalk
+  provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
